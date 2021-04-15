@@ -1,0 +1,93 @@
+@import "../../assets/style/mixins.scss";
+
+.header-section {
+  box-shadow: 0px 5px 10px lightgrey;
+  justify-content: center;
+  display: flex;
+  .header-container {
+    display: flex;
+    width: 80%;
+    @include tablet {
+      width: 100%;
+      z-index: 111;
+    }
+    @include mobile {
+      width: 100%;
+      z-index: 111;
+    }
+    justify-content: space-between;
+    .item-cart {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 20%;
+      @include mobile {
+        width: 38vw;
+      }
+      .login-details {
+        margin: 1% 0 6%;
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          cursor: pointer;
+          margin: 0 0.5em 0 0.5em;
+        }
+        a:visited {
+          color: #262529;
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+      .item-quantity {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightgray;
+        .cart-img {
+          width: 2em;
+          height: 3.5em;
+        }
+      }
+    }
+    .logo-nav-link {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      .logo-img {
+        width: 7em;
+        height: 4em;
+        cursor: pointer;
+        margin: 0.5em 0;
+        @include mobile {
+          width: 6em;
+          height: 2.5em;
+          margin: 0.5em;
+        }
+      }
+      .nav-links {
+        bottom: 1em;
+        position: relative;
+        margin: 0 10%;
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+        }
+        a:visited {
+          color: #262529;
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// padding: 10% 25%;

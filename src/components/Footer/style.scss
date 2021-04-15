@@ -1,0 +1,30 @@
+@import "../../assets/style/mixins.scss";
+
+.footer-section {
+  justify-content: center;
+  display: flex;
+  background: #eaeaea;
+  padding: 0.5em 0;
+  p {
+    margin: 0;
+    font: 14px/16px sans-serif;
+  }
+  .footer-container {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+  }
+  @include tablet {
+    .footer-container {
+      width: fit-content;
+    }
+  }
+  @include mobile {
+    p {
+      font: 12px/14px sans-serif;
+    }
+    .footer-container {
+      letter-spacing: -0.5px;
+    }
+  }
+}

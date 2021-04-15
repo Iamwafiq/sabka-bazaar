@@ -1,0 +1,11 @@
+@import "../../assets/style/mixins.scss";
+.button-container {
+  background: #d00054;
+  padding: 0.6em 0;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  @include mobile {
+    font-size: 12px;
+  }
+}

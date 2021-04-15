@@ -1,0 +1,66 @@
+@import "../../assets/style/mixins.scss";
+.offer-image {
+  width: 80%;
+  margin: auto;
+  padding: 2% 0 0;
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+.offer-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin: 0% auto;
+  padding: 1.5em 0;
+  border-bottom: 1px solid lightgray;
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+  .fruit-banner-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  img {
+    width: 17em;
+    height: 13em;
+    @include mobile {
+      width: 7em;
+      height: 6em;
+    }
+  }
+  .bakery-img {
+    height: 11em;
+  }
+  h3 {
+    margin: 0;
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  button {
+    margin: 0;
+  }
+  .banner-text {
+    margin: 0.6em 1em 1.2em;
+    font: 14px/16px sans-serif;
+    letter-spacing: -0.5px;
+    @include mobile {
+      margin: 0.6em 0;
+    }
+  }
+}
+.slick-dots {
+  bottom: 0px !important;
+  @include mobile {
+    bottom: -8px !important;
+  }
+}

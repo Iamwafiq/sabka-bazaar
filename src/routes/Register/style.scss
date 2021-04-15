@@ -1,0 +1,45 @@
+@import "../../assets/style/mixins.scss";
+.page-content {
+  width: 65%;
+  display: flex;
+  margin: 5% auto;
+  @include tablet {
+    width: 75%;
+  }
+  .text-description {
+    width: 60%;
+    h2 {
+      width: fit-content;
+    }
+    p {
+      width: fit-content;
+      text-align: start;
+      font: 14px/16px sans-serif;
+    }
+  }
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    width: 40%;
+    label {
+      width: fit-content;
+      font-size: 12px;
+      color: #2fb9c6;
+      padding: 2% 0 1% 0%;
+    }
+    input {
+      border: none;
+      background: none;
+      border-bottom: 2px solid lightgray;
+      margin: 5% 0 5% 0;
+      padding: 2% 0 4%;
+      font-size: 14px;
+    }
+    input:focus {
+      outline: none;
+      border-bottom: 2px solid #2fb9c6;
+      margin: -1% 0 3% 0;
+    }
+  }
+}
