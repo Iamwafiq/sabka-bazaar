@@ -5,6 +5,8 @@
   border: none;
   color: rgba(255, 255, 255, 0.95);
   cursor: pointer;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
   @include mobile {
     font-size: 12px;
   }

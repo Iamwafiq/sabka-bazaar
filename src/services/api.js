@@ -11,13 +11,11 @@ export const api = axios.create({ baseURL, headers, timeout: 1800000 });
 export function generateResourceMethod(resouceApi, method) {
   return function (path, data, config = {}) {
     const apiCall = resouceApi[method](path, data, config);
-    const payload = data;
 
     return apiCall.then(
       (responseWrapper) => {
         console.log(responseWrapper);
         let { data } = responseWrapper;
-        const { success } = data;
 
         return data;
       },

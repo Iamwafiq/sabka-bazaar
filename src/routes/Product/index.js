@@ -6,6 +6,7 @@ import ButtonComponent from "../../components/Button";
 import SideMenuComponent from "../../components/SideMenu";
 import { CartContext } from "../../components/Layout";
 
+import arrow from "../../static/images/down-arrow.svg";
 import "./style.scss";
 
 const ProductPage = () => {
@@ -25,7 +26,7 @@ const ProductPage = () => {
       updateCurrentCategory(category);
       history.replace({});
     }
-  }, []);
+  }, []); // eslint-disable-line
   const getData = async () => {
     let tempArr = [];
     const prodcutResult = await apiResource.get("products");
@@ -77,7 +78,7 @@ const ProductPage = () => {
                       })
                     }
                     buttonText="Buy Now"
-                    buttonPadding="0.5em"
+                    buttonPadding="0.5em 1.5em"
                   />
                 </div>
                 <span className="tablet-button">
@@ -109,15 +110,13 @@ const ProductPage = () => {
                   onClick={() => updateCurrentCategory(category)}
                 >
                   <p>{category.name}</p>
-                  <p
+                  <img
                     className={
-                      currentCategory.id === category.id
-                        ? "rotate-icon"
-                        : "hide-icon"
+                      currentCategory.id !== category.id && "hide-icon"
                     }
-                  >
-                    ^
-                  </p>
+                    src={arrow}
+                    alt="arrow"
+                  />
                 </div>
                 {currentCategory?.id === category.id &&
                   products &&
@@ -182,6 +181,7 @@ const ProductPage = () => {
                         </div>
                       );
                     }
+                    return null;
                   })}
               </div>
             ))}

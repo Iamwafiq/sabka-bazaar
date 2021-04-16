@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import RegisterPage from "./routes/Register";
@@ -10,8 +9,6 @@ import ProductPage from "./routes/Product";
 import Layout from "./components/Layout";
 
 const App = () => {
-  // const [cart, updateCart] = useState([]);
-  // const [showCart, setShowcart] = useState(false);
   return (
     <Layout>
       <div className="App">

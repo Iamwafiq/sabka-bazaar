@@ -8,7 +8,7 @@ const LoginPage = () => {
     <div>
       <div className="page-content">
         <div className="text-description">
-          <h2>Login</h2>
+          <h1>Login</h1>
           <p>Get access to your Orders, Wishlist and Recommendations.</p>
         </div>
         <div className="register-form" onBlur={() => updateInput(null)}>

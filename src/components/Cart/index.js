@@ -87,7 +87,7 @@ const Cart = ({ onClick }) => {
                 ))}
               {state.items.length ? (
                 <div className="lowest-price-banner">
-                  <img src={lowest} />
+                  <img src={lowest} alt="lowest-tag" />
                   <p>You won't find it cheaper anywhere</p>
                 </div>
               ) : (
@@ -108,7 +108,10 @@ const Cart = ({ onClick }) => {
 
               <button className="proceed-button">
                 <p>Proceed to Checkout</p>
-                <p> Rs.{totalPrice}</p>
+                <p>
+                  {" "}
+                  Rs.{totalPrice} <p className="swipe-payment">></p>
+                </p>
               </button>
             </div>
           ) : (

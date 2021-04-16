@@ -10,7 +10,7 @@ import "./style.scss";
 
 const HomePage = () => {
   const history = useHistory();
-  const { state, dispatch } = useContext(CartContext);
+  const { state } = useContext(CartContext);
   const [banners, updateBanners] = useState([]);
   const [categories, updateCategories] = useState([]);
   useEffect(() => {

@@ -15,7 +15,7 @@ var settings = {
 };
 
 const Carousel = ({ data }) => {
-  const { state, dispatch } = useContext(CartContext);
+  const { state } = useContext(CartContext);
   return (
     <Slider {...settings}>
       {data &&
