@@ -28,6 +28,9 @@
     flex-direction: column;
     padding: 0 10%;
     width: 40%;
+    @include tablet {
+      padding: 0 5%;
+    }
     label {
       width: fit-content;
       font-size: 12px;
