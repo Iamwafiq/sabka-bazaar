@@ -4,7 +4,9 @@ const SideMenuComponent = ({ categories }) => {
     <div className="side-menu">
       {categories &&
         categories.map((category) => (
-          <div className="each-filter">{category.name}</div>
+          <div key={category.id} className="each-filter">
+            {category.name}
+          </div>
         ))}
     </div>
   );

@@ -1,12 +1,33 @@
-import "./App.css";
+import Loadable from "react-loadable";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import RegisterPage from "./routes/Register";
-import LoginPage from "./routes/Login";
-import HeaderComponent from "./components/Header";
-import FooterComponent from "./components/Footer";
-import HomePage from "./routes/Home";
-import ProductPage from "./routes/Product";
+
 import Layout from "./components/Layout";
+import LoadingComponent from "./components/LoadingComponent";
+
+const RegisterPage = Loadable({
+  loader: () => import("./routes/Register"),
+  loading: LoadingComponent,
+});
+const LoginPage = Loadable({
+  loader: () => import("./routes/Login"),
+  loading: LoadingComponent,
+});
+const HomePage = Loadable({
+  loader: () => import("./routes/Home"),
+  loading: LoadingComponent,
+});
+const ProductPage = Loadable({
+  loader: () => import("./routes/Product"),
+  loading: LoadingComponent,
+});
+const HeaderComponent = Loadable({
+  loader: () => import("./components/Header"),
+  loading: LoadingComponent,
+});
+const FooterComponent = Loadable({
+  loader: () => import("./components/Footer"),
+  loading: LoadingComponent,
+});
 
 const App = () => {
   return (

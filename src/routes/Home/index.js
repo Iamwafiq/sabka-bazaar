@@ -35,7 +35,7 @@ const HomePage = () => {
         categories.map((category, index) => {
           const { description, name, key, imageUrl } = category;
           return (
-            <div className="offer-banner">
+            <div className="offer-banner" key={category.id}>
               {index % 2 === 0 && (
                 <img src={state.images[imageUrl]} alt={key} />
               )}

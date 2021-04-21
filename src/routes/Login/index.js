@@ -16,7 +16,7 @@ const LoginPage = () => {
           {activeInput === 1 && <label>Email</label>}
           <input
             id="email-input"
-            placeholder={activeInput !== 1 && "Email"}
+            placeholder={activeInput !== 1 ? "Email" : ""}
             onFocus={() => updateInput(1)}
             value={formState.email || ""}
             onChange={(e) =>
@@ -27,7 +27,7 @@ const LoginPage = () => {
           <input
             id="password-input"
             type="password"
-            placeholder={activeInput !== 2 && "Password"}
+            placeholder={activeInput !== 2 ? "Password" : ""}
             onFocus={() => updateInput(2)}
             value={formState.password || ""}
             onChange={(e) =>

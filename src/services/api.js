@@ -14,7 +14,7 @@ export function generateResourceMethod(resouceApi, method) {
 
     return apiCall.then(
       (responseWrapper) => {
-        console.log(responseWrapper);
+        // console.log(responseWrapper);
         let { data } = responseWrapper;
 
         return data;

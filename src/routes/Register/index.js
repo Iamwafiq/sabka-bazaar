@@ -16,7 +16,7 @@ const RegisterPage = () => {
           {activeInput === 1 && <label>First Name</label>}
           <input
             type="text"
-            placeholder={activeInput !== 1 && "First Name"}
+            placeholder={activeInput !== 1 ? "First Name" : ""}
             onFocus={() => updateInput(1)}
             value={formState.firstName || ""}
             onChange={(e) =>
@@ -26,7 +26,7 @@ const RegisterPage = () => {
           {activeInput === 2 && <label>Last Name</label>}
           <input
             type="text"
-            placeholder={activeInput !== 2 && "Last Name"}
+            placeholder={activeInput !== 2 ? "Last Name" : ""}
             onFocus={() => updateInput(2)}
             value={formState.lastName || ""}
             onChange={(e) =>
@@ -36,7 +36,7 @@ const RegisterPage = () => {
           {activeInput === 3 && <label>Email</label>}
           <input
             type="email"
-            placeholder={activeInput !== 3 && "Email"}
+            placeholder={activeInput !== 3 ? "Email" : ""}
             onFocus={() => updateInput(3)}
             value={formState.email || ""}
             onChange={(e) =>
@@ -46,7 +46,7 @@ const RegisterPage = () => {
           {activeInput === 4 && <label>Pasword</label>}
           <input
             type="password"
-            placeholder={activeInput !== 4 && "Password"}
+            placeholder={activeInput !== 4 ? "Password" : ""}
             onFocus={() => updateInput(4)}
             value={formState.password || ""}
             onChange={(e) =>
@@ -56,7 +56,7 @@ const RegisterPage = () => {
           {activeInput === 5 && <label>Confirm Password</label>}
           <input
             type="password"
-            placeholder={activeInput !== 5 && "Confirm Password"}
+            placeholder={activeInput !== 5 ? "Confirm Password" : ""}
             onFocus={() => updateInput(5)}
             value={formState.confirmPassword || ""}
             onChange={(e) =>

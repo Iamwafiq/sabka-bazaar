@@ -23,7 +23,7 @@ const Carousel = ({ data }) => {
           const { isActive, bannerImageUrl, bannerImageAlt } = banner;
           if (isActive) {
             return (
-              <div>
+              <div key={banner.id}>
                 <img
                   className="offer-image"
                   src={state.images[bannerImageUrl]}

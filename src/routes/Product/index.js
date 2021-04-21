@@ -42,7 +42,7 @@ const ProductPage = () => {
         <div className="product-list">
           {products &&
             products.map((product) => (
-              <div className="each-card">
+              <div className="each-card" key={product.id}>
                 <h4
                   onClick={() =>
                     dispatch({
@@ -104,7 +104,7 @@ const ProductPage = () => {
         <div className="product-list mobile">
           {categories &&
             categories.map((category) => (
-              <div>
+              <div key={category.id}>
                 <div
                   className="each-category"
                   onClick={() => updateCurrentCategory(category)}
@@ -123,7 +123,7 @@ const ProductPage = () => {
                   products.map((product) => {
                     if (product.category === category.id) {
                       return (
-                        <div className="each-card">
+                        <div className="each-card" key={product.id}>
                           <h4
                             onClick={() =>
                               dispatch({
