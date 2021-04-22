@@ -19,10 +19,10 @@
   padding: 1.5em 0;
   border-bottom: 1px solid lightgray;
   @include tablet {
-    width: 100%;
+    width: 95%;
   }
   @include mobile {
-    width: 100%;
+    width: 95%;
   }
   .fruit-banner-text {
     display: flex;
