@@ -10,4 +10,7 @@
   @include mobile {
     font-size: 12px;
   }
+  @include small-laptops {
+    padding: 0.5em 0.5em !important;
+  }
 }

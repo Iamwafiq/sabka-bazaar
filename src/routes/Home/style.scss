@@ -28,6 +28,10 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    h3,
+    p {
+      text-align: center;
+    }
   }
   img {
     width: 17em;
@@ -51,9 +55,28 @@
   }
   .banner-text {
     margin: 0.6em 1em 1.2em;
-    font: 600 14px/16px "Dosis", sans-serif;
+    font: 500 16px/18px "Dosis", sans-serif;
     @include mobile {
       margin: 0.6em 0;
+      font: 500 12px/14px "Dosis", sans-serif;
+    }
+  }
+  .heading-tab-mobile {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+  .heading-laptop {
+    font-size: 22px;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
     }
   }
 }

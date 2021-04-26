@@ -171,7 +171,8 @@
       }
       .cart-content {
         height: 77%;
-        overflow: scroll;
+        overflow: hidden;
+        overflow-y: scroll;
         @include tablet {
           height: 69%;
         }
@@ -240,7 +241,7 @@
             }
           }
           .item-final-price {
-            width: 12%;
+            width: 10%;
             display: flex;
             align-items: flex-end;
           }
@@ -251,7 +252,7 @@
             .item-detail {
               width: 70%;
               .item-quantity {
-                width: 30%;
+                width: 35%;
               }
             }
             .item-final-price {

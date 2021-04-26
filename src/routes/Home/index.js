@@ -41,11 +41,14 @@ const HomePage = () => {
               )}
               <div className="fruit-banner-text">
                 <div>
-                  <h3>{name}</h3>
+                  <h3 className="heading-laptop">{name}</h3>
+                  <h3 className="heading-tab-mobile">{name}</h3>
                   <p className="banner-text">{description}</p>
                   <ButtonComponent
                     buttonText={`Explore ${key}`}
                     buttonPadding="1em"
+                    buttonMargin="auto"
+                    buttonDisplay="block"
                     onClick={() => history.push("/products", { category })}
                   />
                 </div>

@@ -43,6 +43,7 @@ const ProductPage = () => {
           {products &&
             products.map((product) => (
               <div className="each-card" key={product.id}>
+                <div className="side-border" />
                 <h4
                   onClick={() =>
                     dispatch({
@@ -58,14 +59,16 @@ const ProductPage = () => {
                   src={state?.images[product.imageURL]}
                   alt={product.sku}
                 />
-                <p className="product-description">{product.description}</p>
+                <p className="product-description">
+                  {product.description.slice(0, 138)}
+                </p>
                 <div className="product-tablet">
                   <img
                     src={state?.images[product.imageURL]}
                     alt={product.sku}
                   />
                   <p className="product-description-tablet">
-                    {product.description}
+                    {product.description.slice(0, 170)}
                   </p>
                 </div>
                 <div className="price-description">
@@ -140,7 +143,7 @@ const ProductPage = () => {
                             alt={product.sku}
                           />
                           <p className="product-description">
-                            {product.description}
+                            {product.description.slice(0, 130)}
                           </p>
                           <div className="product-tablet">
                             <img
@@ -149,7 +152,7 @@ const ProductPage = () => {
                             />
                             <div className="product-mobile-info">
                               <p className="product-description-tablet">
-                                {product.description}
+                                {product.description.slice(0, 130)}
                               </p>
                               <ButtonComponent
                                 onClick={() =>

@@ -8,6 +8,7 @@ const ButtonComponent = (props) => {
     onClick,
     buttonWidth,
     buttonFont,
+    buttonDisplay,
   } = props;
   const clickEvent = () => {
     if (onClick) {
@@ -21,6 +22,7 @@ const ButtonComponent = (props) => {
         padding: buttonPadding,
         width: buttonWidth,
         fontSize: buttonFont,
+        display: buttonDisplay,
       }}
       className="button-container"
       onClick={() => clickEvent()}
