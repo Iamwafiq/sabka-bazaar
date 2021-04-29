@@ -196,7 +196,10 @@
     padding: 0 0.5em;
     font: 600 12px/14px "Dosis", sans-serif;
     @include large-screen {
-      font: 600 26px/28px "Dosis", sans-serif;
+      font: 600 22px/24px "Dosis", sans-serif;
+    }
+    @include small-laptops {
+      font: 600 11px/13px "Dosis", sans-serif;
     }
   }
   /*---query for price-description---*/

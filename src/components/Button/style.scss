@@ -7,13 +7,14 @@
   cursor: pointer;
   font-family: "Dosis", sans-serif;
   font-weight: 500;
+  font-size: 12px;
   @include mobile {
     font-size: 12px;
   }
   @include small-laptops {
-    padding: 0.5em 0.5em !important;
+    font-size: 11px;
   }
   @include large-screen {
-    font-size: 30px;
+    font-size: 22px;
   }
 }

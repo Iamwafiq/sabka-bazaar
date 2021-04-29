@@ -34,7 +34,8 @@ const ProductCard = (props) => {
                   })
                 }
                 buttonText="Buy Now"
-                buttonPadding="0.5em 1.5em"
+                buttonPadding="0.4em 0em"
+                buttonWidth="52%"
               />
             </div>
             <div className="tablet-button">
