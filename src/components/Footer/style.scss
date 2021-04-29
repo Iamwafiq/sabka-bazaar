@@ -8,6 +8,9 @@
   p {
     margin: 0;
     font: 500 14px/16px "Dosis", sans-serif;
+    @include large-screen {
+      font: 500 26px/28px "Dosis", sans-serif;
+    }
   }
   .footer-container {
     display: flex;

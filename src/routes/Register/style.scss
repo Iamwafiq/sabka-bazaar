@@ -13,11 +13,17 @@
     width: 60%;
     h1 {
       width: fit-content;
+      @include large-screen {
+        font-size: 44px;
+      }
     }
     p {
       width: fit-content;
       text-align: start;
       font: 600 16px/18px "Dosis", sans-serif;
+      @include large-screen {
+        font: 600 32px/34px "Dosis", sans-serif;
+      }
     }
     @include mobile {
       width: 100%;
@@ -36,6 +42,9 @@
       font-size: 12px;
       color: #2fb9c6;
       padding: 2% 0 1% 0%;
+      @include large-screen {
+        font-size: 26px;
+      }
     }
     input {
       border: none;
@@ -44,11 +53,19 @@
       margin: 5% 0 5% 0;
       padding: 2% 0 4%;
       font-size: 14px;
+      @include large-screen {
+        font-size: 26px;
+      }
     }
     input:focus {
       outline: none;
       border-bottom: 2px solid #2fb9c6;
       margin: -1% 0 3% 0;
+    }
+    @include large-screen {
+      input::placeholder {
+        font-size: 24px;
+      }
     }
     @include mobile {
       padding: 0;

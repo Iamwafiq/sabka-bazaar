@@ -30,6 +30,59 @@ const Cart = ({ onClick }) => {
       setTotalPrice(null);
     }
   }, [state.items]);
+
+  const renderItems = () => {
+    return (
+      <div className="cart-content">
+        {items &&
+          items.map((item) => (
+            <div className="each-item">
+              <img
+                className="item-image"
+                src={state?.images[item.imageURL]}
+                alt={item.sku}
+              />
+              <div className="cart-item-details">
+                <div className="item-detail">
+                  <h4>{item.name}</h4>
+                  <div className="item-quantity">
+                    <button
+                      className="icon-button"
+                      onClick={() =>
+                        dispatch({ type: "removeItem", payload: item })
+                      }
+                    >
+                      -
+                    </button>
+                    <span>{item.count}</span>
+                    <button
+                      className="icon-button"
+                      onClick={() =>
+                        dispatch({ type: "addItem", payload: item })
+                      }
+                    >
+                      +
+                    </button>
+                    <span className="times-icon">x</span>
+                    <span>Rs.{item.price}</span>
+                  </div>
+                </div>
+                <p className="item-final-price">Rs.{item.price * item.count}</p>
+              </div>
+            </div>
+          ))}
+        {state.items.length ? (
+          <div className="lowest-price-banner">
+            <img src={lowest} alt="lowest-tag" />
+            <p>You won't find it cheaper anywhere</p>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="modal-parent">
       <div className="modal-back" />
@@ -47,53 +100,7 @@ const Cart = ({ onClick }) => {
             <p onClick={() => dispatch({ type: "changeVisibilty" })}>x</p>
           </div>
           {state.items.length ? (
-            <div className="cart-content">
-              {items &&
-                items.map((item) => (
-                  <div className="each-item">
-                    <img
-                      className="item-image"
-                      src={state?.images[item.imageURL]}
-                      alt={item.sku}
-                    />
-                    <div className="item-detail">
-                      <h4>{item.name}</h4>
-                      <div className="item-quantity">
-                        <button
-                          className="icon-button"
-                          onClick={() =>
-                            dispatch({ type: "removeItem", payload: item })
-                          }
-                        >
-                          -
-                        </button>
-                        <span>{item.count}</span>
-                        <button
-                          className="icon-button"
-                          onClick={() =>
-                            dispatch({ type: "addItem", payload: item })
-                          }
-                        >
-                          +
-                        </button>
-                        <span className="times-icon">x</span>
-                        <span>Rs.{item.price}</span>
-                      </div>
-                    </div>
-                    <p className="item-final-price">
-                      Rs.{item.price * item.count}
-                    </p>
-                  </div>
-                ))}
-              {state.items.length ? (
-                <div className="lowest-price-banner">
-                  <img src={lowest} alt="lowest-tag" />
-                  <p>You won't find it cheaper anywhere</p>
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
+            renderItems()
           ) : (
             <div className="cart-content empty-content">
               <h4>No items in your cart</h4>
@@ -105,7 +112,6 @@ const Cart = ({ onClick }) => {
               <p className="promo-text">
                 Promo code can be applied on payment page
               </p>
-
               <button className="proceed-button">
                 <p>Proceed to Checkout</p>
                 <p>

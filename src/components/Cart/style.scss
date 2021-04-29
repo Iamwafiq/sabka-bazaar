@@ -8,6 +8,7 @@
   left: 0;
   overflow: hidden;
   .modal-back {
+    overflow-y: scroll;
     background: black;
     position: absolute;
     width: 100vw;
@@ -16,7 +17,7 @@
     opacity: 30%;
     top: 0;
     left: 0;
-    overflow: hidden;
+
     @include tablet {
       background: #eeeeee;
       z-index: 1;
@@ -51,260 +52,356 @@
       top: 15%;
       float: right;
       @include tablet {
+        top: 16%;
+        width: 100%;
+        height: 84%;
+      }
+      @include ipad {
         top: 12%;
         width: 100%;
         height: 88%;
       }
       @include mobile {
-        top: 16%;
+        top: 12%;
         width: 100%;
-        height: 84%;
-      }
-      .empty-cart {
-        padding: 1em;
-        box-sizing: border-box;
-        height: 10% !important;
-        button {
-          width: 100%;
-        }
-        // @include tablet {
-        //   height: 12%;
-        // }
-      }
-      .cart-payment {
-        position: absolute;
-        bottom: 0;
-        background: white;
-        width: 100%;
-        height: 16%;
-        .promo-text {
-          margin: 0.5em auto;
-          font: 13px/15px "Dosis", sans-serif;
-          text-align: center;
-        }
-        .proceed-button {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          width: 95%;
-          margin: 1em auto;
-          color: white;
-          background: #d00054;
-          border: none;
-          p {
-            display: flex;
-            flex-direction: row;
-          }
-        }
-        @include tablet {
-          height: 15%;
-          .promo-text {
-            margin: 0.5em auto 0;
-            font: 18px/20px "Dosis", sans-serif;
-          }
-          .proceed-button {
-            font: 16px/18px "Dosis", sans-serif;
-            margin: 0.5em auto;
-          }
-        }
-        @include mobile {
-          .promo-text {
-            margin: 0.5em auto 0;
-          }
-          height: 20%;
-        }
-      }
-      .cart-header {
-        background-color: #1d2124;
-        color: white;
-        font: 600 16px/18px "Dosis", sans-serif;
-        text-align: left;
-        padding: 1em;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 3%;
-        p {
-          margin: 0;
-          cursor: pointer;
-        }
-        span {
-          font: 14px/16px "Dosis", sans-serif;
-          margin: 0;
-        }
-        @include tablet {
-          background-color: white;
-          color: black;
-          span {
-            color: gray;
-          }
-          p {
-            display: none;
-          }
-        }
-        @include mobile {
-          background-color: white;
-          color: black;
-          span {
-            color: gray;
-          }
-          p {
-            display: none;
-          }
-        }
-      }
-      .empty-content {
-        background-color: white;
-        overflow: hidden !important;
-        height: 84% !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        h4 {
-          margin: 0;
-        }
-        p {
-          margin: 0.5em auto;
-          font: 14px/16px "Dosis", sans-serif;
-        }
-      }
-      .cart-content {
-        height: 77%;
-        overflow: hidden;
-        overflow-y: scroll;
-        @include tablet {
-          height: 69%;
-        }
-        @include mobile {
-          height: 69%;
-        }
-        .each-item {
-          background-color: white;
-          margin: 1em 0;
-          display: flex;
-          flex-direction: row;
-          padding: 1em;
-          box-sizing: border-box;
-          justify-content: space-between;
-          .item-image {
-            width: 14%;
-          }
-          .item-detail {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            width: 68%;
-            h4 {
-              margin: 0;
-              letter-spacing: -0.5px;
-              text-align: left;
-              padding: 0;
-            }
-            .item-quantity {
-              display: flex;
-              justify-content: space-around;
-              width: fit-content;
-              .icon-button {
-                background-color: #d00054;
-                color: white;
-                border-radius: 50%;
-                border: none;
-                width: 1.2em;
-                height: 1.5em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
-                // text-align: center;
-                // font: 14px/14px sans-;
-                // width: 1em;
-                // height: 1.3em;
-                // font-size: 14px;
-                cursor: pointer;
-                padding: 0 5px;
-                margin: 0 0.5em;
-                @include tablet {
-                  border-radius: 3px;
-                }
-                @include mobile {
-                  border-radius: 3px;
-                }
-              }
-              .times-icon {
-                display: flex;
-                height: fit-content;
-                margin: 0 0.5em;
-              }
-            }
-          }
-          .item-final-price {
-            width: 10%;
-            display: flex;
-            align-items: flex-end;
-          }
-          @include tablet {
-            .item-image {
-              width: 10%;
-            }
-            .item-detail {
-              width: 70%;
-              .item-quantity {
-                width: 35%;
-              }
-            }
-            .item-final-price {
-              justify-content: flex-end;
-            }
-          }
-          @include mobile {
-            .item-image {
-              width: 15%;
-              height: 5em;
-            }
-            .item-detail {
-              width: 70%;
-              font-size: 14px;
-              .item-quantity {
-                width: fit-content;
-              }
-              h4 {
-                margin: 0 0 0.5em;
-              }
-            }
-            .item-final-price {
-              justify-content: flex-end;
-            }
-          }
-        }
-        .lowest-price-banner {
-          display: flex;
-          width: 92%;
-          margin: auto;
-          background: white;
-          align-items: center;
-          padding: 0.5em 0.7em;
-          img {
-            width: 6em;
-            height: 2em;
-          }
-          p {
-            margin: 0 0.5em 0 1em;
-            font: 14px/16px "Dosis", sans-serif;
-          }
-          @include tablet {
-            width: 95%;
-          }
-          @include mobile {
-            width: 95%;
-          }
-        }
+        height: 88%;
       }
     }
   }
 }
 .swipe-payment {
   margin: auto 0.5em;
+}
+.lowest-price-banner {
+  display: flex;
+  width: 92%;
+  margin: auto;
+  background: white;
+  align-items: center;
+  padding: 0.5em 0.7em;
+  img {
+    width: 6em;
+    height: 2em;
+  }
+  p {
+    margin: 0 0.5em 0 1em;
+    font: 600 14px/16px "Dosis", sans-serif;
+  }
+  @include large-screen {
+    p {
+      font-size: 26px;
+    }
+    img {
+      width: 9em;
+      height: 4em;
+    }
+  }
+  @include tablet {
+    width: 95%;
+  }
+  @include mobile {
+    width: 95%;
+  }
+}
+.item-final-price {
+  width: 23%;
+  display: flex;
+  align-items: flex-end;
+  height: 72%;
+  justify-content: flex-end;
+  font-weight: 600;
+  @include large-screen {
+    font-size: 26px;
+  }
+}
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 75%;
+  h4 {
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-align: left;
+    padding: 0;
+    @include large-screen {
+      font-size: 24px;
+    }
+  }
+}
+.item-quantity {
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+  @include mobile {
+    width: 118px;
+  }
+  span {
+    width: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
+  @include large-screen {
+    align-items: baseline;
+    span {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}
+.icon-button {
+  background-color: #d00054;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  width: 1.2em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 5px;
+  margin: 0 0.5em;
+  @include large-screen {
+    font-size: 30px;
+  }
+  @include tablet {
+    border-radius: 3px;
+  }
+  @include mobile {
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 0 0 0 0.5em;
+  }
+}
+.times-icon {
+  display: flex;
+  height: fit-content;
+  margin: 0 0.5em;
+  @include mobile {
+    width: fit-content !important;
+  }
+}
+.each-item {
+  background-color: white;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  box-sizing: border-box;
+  justify-content: space-between;
+  .cart-item-details {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+  }
+  .item-image {
+    width: 14%;
+  }
+
+  @include tablet {
+    .item-image {
+      width: 10%;
+    }
+    .item-detail {
+      width: 85%;
+      font-size: 14px;
+      .item-quantity {
+        width: 35%;
+      }
+      h4 {
+        height: 35%;
+      }
+    }
+    .item-final-price {
+      justify-content: flex-end;
+      width: 15%;
+      height: 60%;
+      align-items: flex-end;
+    }
+  }
+  @include mobile {
+    .item-image {
+      width: 15%;
+      height: 5em;
+    }
+    .item-detail {
+      width: 85%;
+      font-size: 14px;
+      .item-quantity {
+        width: fit-content;
+      }
+      h4 {
+        margin: 0 0 0.5em;
+        height: 55%;
+      }
+    }
+    .item-final-price {
+      justify-content: flex-end;
+      width: 15%;
+      height: 75%;
+      align-items: flex-end;
+    }
+  }
+}
+.cart-content {
+  height: 74.5%;
+  overflow: hidden;
+  overflow-y: scroll;
+  @include large-screen {
+    height: 82%;
+  }
+  @include tablet {
+    height: 69%;
+  }
+  @include mobile {
+    height: 78.5%;
+  }
+}
+.empty-cart {
+  padding: 1em;
+  box-sizing: border-box;
+  height: 11% !important;
+  button {
+    width: 100%;
+  }
+  @include tablet {
+    height: 12% !important;
+    button {
+      font-size: 12px !important;
+    }
+  }
+}
+.empty-content {
+  background-color: white;
+  overflow: hidden !important;
+  height: 84% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h4 {
+    margin: 0;
+  }
+  p {
+    margin: 0.5em auto;
+    font: 14px/16px "Dosis", sans-serif;
+  }
+  @include tablet {
+    h4 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+.cart-header {
+  background-color: #1d2124;
+  color: white;
+  font: 600 16px/18px "Dosis", sans-serif;
+  text-align: left;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3%;
+  @include large-screen {
+    font: 600 28px/30px "Dosis", sans-serif;
+    height: 2%;
+  }
+  p {
+    margin: 0;
+    cursor: pointer;
+  }
+  span {
+    font: 14px/16px "Dosis", sans-serif;
+    margin: 0;
+    @include large-screen {
+      font: 22px/24px "Dosis", sans-serif;
+    }
+  }
+  @include tablet {
+    background-color: white;
+    color: black;
+    span {
+      color: gray;
+    }
+    p {
+      display: none;
+    }
+  }
+  @include mobile {
+    background-color: white;
+    color: black;
+    span {
+      color: gray;
+    }
+    p {
+      display: none;
+    }
+  }
+}
+.cart-payment {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  height: 16%;
+  .promo-text {
+    margin: 0.5em auto;
+    font: 600 13px/15px "Dosis", sans-serif;
+    text-align: center;
+  }
+  .proceed-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0.5em auto 1em;
+    color: white;
+    background: #d00054;
+    border: none;
+    p {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  @include large-screen {
+    height: 12%;
+    .promo-text {
+      font: 28px/28px "Dosis", sans-serif;
+    }
+    .proceed-button {
+      font-size: 26px;
+      p {
+        padding-left: 2%;
+      }
+    }
+  }
+  @include tablet {
+    height: 16%;
+    .promo-text {
+      margin: 0.5em auto 0;
+      font: 500 14px/16px "Dosis", sans-serif;
+    }
+    .proceed-button {
+      font-size: 11px;
+    }
+  }
+  @include ipad {
+    height: 13%;
+  }
+  @include mobile {
+    .promo-text {
+      font: 500 12px/12px "Dosis", sans-serif;
+      margin: 0.5em auto 0;
+    }
+    height: 13%;
+    .proceed-button {
+      font-size: 11px;
+    }
+  }
 }

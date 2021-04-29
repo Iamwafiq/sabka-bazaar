@@ -13,4 +13,7 @@
   @include small-laptops {
     padding: 0.5em 0.5em !important;
   }
+  @include large-screen {
+    font-size: 30px;
+  }
 }

@@ -4,23 +4,10 @@
   box-shadow: 0px 5px 10px lightgrey;
   justify-content: center;
   display: flex;
-  // @include mobile {
-  //   height: 15vw;
-  // }
-
   .header-container {
     display: flex;
     width: 80%;
     background: white;
-    @include tablet {
-      width: 100%;
-      z-index: 111;
-    }
-    @include mobile {
-      width: 100%;
-      z-index: 111;
-      height: 100%;
-    }
     justify-content: space-between;
     .item-cart {
       display: flex;
@@ -30,76 +17,113 @@
       @include mobile {
         width: 38vw;
       }
-      .login-details {
-        margin: 1% 0 6%;
-        width: fit-content;
-        display: flex;
-        justify-content: space-between;
-        a {
-          text-decoration: none;
-          font-size: 12px;
-          cursor: pointer;
-          margin: 0 0.5em 0 0.5em;
-        }
-        a:visited {
-          color: #262529;
-        }
-        @include mobile {
-          display: none;
-        }
-      }
-      .item-quantity {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #eeeeee;
-        .cart-img {
-          width: 2em;
-          height: 3.5em;
-        }
-        @include mobile {
-          height: 100%;
-        }
-        @include tablet {
-          height: 100%;
-        }
+      @include large-screen {
+        width: 12%;
       }
     }
-    .logo-nav-link {
-      display: flex;
-      align-items: baseline;
+    /*---query for header container---*/
+    @include tablet {
       width: 100%;
-      .logo-img {
-        width: 7em;
-        height: 4em;
-        cursor: pointer;
-        margin: 0.5em 0;
-        @include mobile {
-          width: 6em;
-          height: 2.5em;
-          margin: 0.5em;
-        }
-      }
-      .nav-links {
-        bottom: 1em;
-        position: relative;
-        margin: 0 10%;
-        width: 20%;
-        display: flex;
-        justify-content: space-evenly;
-        a {
-          text-decoration: none;
-          cursor: pointer;
-          font-size: 14px;
-        }
-        a:visited {
-          color: #262529;
-        }
-        @include mobile {
-          display: none;
-        }
-      }
+      z-index: 111;
     }
+    @include mobile {
+      width: 100%;
+      z-index: 111;
+      height: 100%;
+    }
+  }
+}
+.login-details {
+  margin: 1% 0 6%;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 0.5em 0 0.5em;
+    color: #262529;
+    @include large-screen {
+      font-size: 26px;
+    }
+  }
+  a:visited {
+    color: #262529;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.item-quantity-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeeeee;
+  cursor: pointer;
+
+  @include mobile {
+    height: 100%;
+  }
+  @include tablet {
+    height: 100%;
+  }
+  @include large-screen {
+    span {
+      font-size: 26px;
+    }
+  }
+}
+.logo-nav-link {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  .logo-img {
+    width: 7em;
+    height: 4em;
+    cursor: pointer;
+    margin: 0.5em 0;
+    @include mobile {
+      width: 6em;
+      height: 2.5em;
+      margin: 0.5em;
+    }
+    @include large-screen {
+      width: 12em;
+      height: 4.5em;
+      margin: 1.5em;
+    }
+  }
+}
+.nav-links {
+  bottom: 1em;
+  position: relative;
+  margin: 0 10%;
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #262529;
+    @include large-screen {
+      font-size: 32px;
+    }
+  }
+  a:visited {
+    color: #262529;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.cart-img {
+  width: 2em;
+  height: 3.5em;
+  @include large-screen {
+    width: 3.5em;
+    height: 4.5em;
   }
 }

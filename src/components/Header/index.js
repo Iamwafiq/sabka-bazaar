@@ -42,7 +42,7 @@ const HeaderComponent = () => {
             <Link to="/register">Register</Link>
           </div>
           <div
-            className="item-quantity"
+            className="item-quantity-header"
             onClick={(e) => {
               e.stopPropagation();
               dispatch({ type: "changeVisibilty" });

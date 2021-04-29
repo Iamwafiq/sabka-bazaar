@@ -14,6 +14,9 @@
     @include tablet {
       letter-spacing: -0.5px;
     }
+    @include large-screen {
+      font: 500 26px/26px "Dosis", sans-serif;
+    }
   }
   @include mobile {
     display: none;

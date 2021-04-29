@@ -1,0 +1,30 @@
+@import "../../assets/style/mixins.scss";
+.each-category {
+  width: 100vw;
+  color: white;
+  background-color: #d00054;
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+  margin: 0.5px 0;
+  box-sizing: border-box;
+  p {
+    margin: 0;
+    font: 400 14px/16px "Dosis", sans-serif;
+  }
+  img {
+    height: 1em;
+    width: 1em;
+  }
+}
+.product-mobile-info {
+  display: none;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.hide-icon {
+  display: none;
+}
