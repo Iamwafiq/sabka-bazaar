@@ -16,7 +16,7 @@
     display: flex;
     width: 75%;
     justify-content: space-between;
-    font-weight: 600;
+    font-weight: 500;
   }
   @include tablet {
     .footer-container {
@@ -25,7 +25,7 @@
   }
   @include mobile {
     p {
-      font: 600 12px/14px "Dosis", sans-serif;
+      font: 500 12px/14px "Dosis", sans-serif;
     }
     .footer-container {
       letter-spacing: -0.5px;
