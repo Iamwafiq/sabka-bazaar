@@ -1,0 +1,35 @@
+@import "../../assets/style/mixins.scss";
+.carousel-parent {
+  position: relative;
+}
+.prev-button,
+.next-button {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 90%;
+  width: fit-content;
+  padding: 0.5em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 45%;
+  z-index: 1;
+  font-size: 12px;
+  @include mobile {
+    display: none;
+  }
+}
+.next-button {
+  right: 10%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 70%;
+  @include tablet {
+    right: 0%;
+  }
+}
+.prev-button {
+  left: 10%;
+  @include tablet {
+    left: 0%;
+  }
+}
