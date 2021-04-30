@@ -107,7 +107,7 @@ function cartReducer(state, action) {
       };
     }
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`);
+      return state;
     }
   }
 }

@@ -5,27 +5,27 @@ import Layout from "./components/Layout";
 import LoadingComponent from "./components/LoadingComponent";
 
 const RegisterPage = Loadable({
-  loader: () => import("./routes/Register"),
+  loader: () => import(/* webpackChunkName: "Register" */ "./routes/Register"),
   loading: LoadingComponent,
 });
 const LoginPage = Loadable({
-  loader: () => import("./routes/Login"),
+  loader: () => import(/* webpackChunkName: "Login" */ "./routes/Login"),
   loading: LoadingComponent,
 });
 const HomePage = Loadable({
-  loader: () => import("./routes/Home"),
+  loader: () => import(/* webpackChunkName: "Home" */ "./routes/Home"),
   loading: LoadingComponent,
 });
 const ProductPage = Loadable({
-  loader: () => import("./routes/Product"),
+  loader: () => import(/* webpackChunkName: "Product" */ "./routes/Product"),
   loading: LoadingComponent,
 });
 const HeaderComponent = Loadable({
-  loader: () => import("./components/Header"),
+  loader: () => import(/* webpackChunkName: "Header" */ "./components/Header"),
   loading: LoadingComponent,
 });
 const FooterComponent = Loadable({
-  loader: () => import("./components/Footer"),
+  loader: () => import(/* webpackChunkName: "Footer" */ "./components/Footer"),
   loading: LoadingComponent,
 });
 
