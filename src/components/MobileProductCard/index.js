@@ -23,7 +23,9 @@ const MobileProductCard = (props) => {
             >
               <p>{category.name}</p>
               <img
-                className={currentCategory.id !== category.id && "hide-icon"}
+                className={
+                  currentCategory.id !== category.id ? "hide-icon" : ""
+                }
                 src={arrow}
                 alt="arrow"
               />

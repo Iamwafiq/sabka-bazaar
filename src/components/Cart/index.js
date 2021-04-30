@@ -45,29 +45,33 @@ const Cart = ({ onClick }) => {
               <div className="cart-item-details">
                 <div className="item-detail">
                   <h4>{item.name}</h4>
-                  <div className="item-quantity">
-                    <button
-                      className="icon-button"
-                      onClick={() =>
-                        dispatch({ type: "removeItem", payload: item })
-                      }
-                    >
-                      -
-                    </button>
-                    <span>{item.count}</span>
-                    <button
-                      className="icon-button"
-                      onClick={() =>
-                        dispatch({ type: "addItem", payload: item })
-                      }
-                    >
-                      +
-                    </button>
-                    <span className="times-icon">x</span>
-                    <span>Rs.{item.price}</span>
+                  <div className="item-content">
+                    <div className="item-quantity">
+                      <button
+                        className="icon-button"
+                        onClick={() =>
+                          dispatch({ type: "removeItem", payload: item })
+                        }
+                      >
+                        -
+                      </button>
+                      <span>{item.count}</span>
+                      <button
+                        className="icon-button"
+                        onClick={() =>
+                          dispatch({ type: "addItem", payload: item })
+                        }
+                      >
+                        +
+                      </button>
+                      <span className="times-icon">x</span>
+                      <span>Rs.{item.price}</span>
+                    </div>
+                    <div className="item-final-price">
+                      Rs.{item.price * item.count}
+                    </div>
                   </div>
                 </div>
-                <p className="item-final-price">Rs.{item.price * item.count}</p>
               </div>
             </div>
           ))}
