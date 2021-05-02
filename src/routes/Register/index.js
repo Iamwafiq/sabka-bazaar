@@ -9,7 +9,7 @@ const RegisterPage = () => {
     <div>
       <div className="page-content">
         <div className="text-description">
-          <h1>Signup</h1>
+          <h2>Signup</h2>
           <p>We do not share your personal details with anyone.</p>
         </div>
         <div className="register-form" onBlur={() => updateInput(null)}>

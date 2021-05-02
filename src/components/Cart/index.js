@@ -55,7 +55,7 @@ const Cart = ({ onClick }) => {
                       >
                         -
                       </button>
-                      <span>{item.count}</span>
+                      <span className="item-count">{item.count}</span>
                       <button
                         className="icon-button"
                         onClick={() =>
@@ -65,7 +65,7 @@ const Cart = ({ onClick }) => {
                         +
                       </button>
                       <span className="times-icon">x</span>
-                      <span>Rs.{item.price}</span>
+                      <span className="item-price">Rs.{item.price}</span>
                     </div>
                     <div className="item-final-price">
                       Rs.{item.price * item.count}

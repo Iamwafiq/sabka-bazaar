@@ -97,8 +97,9 @@
     padding: 0em;
   }
   @include small-laptops {
-    width: 22%;
+    width: 22.5%;
     height: 20em;
+    padding: 0.25em;
   }
 }
 

@@ -1,17 +1,18 @@
 @import "../../assets/style/mixins.scss";
 .page-content {
-  width: 65%;
+  width: 75%;
   display: flex;
   margin: 5% auto;
+  justify-content: flex-start;
   @include tablet {
-    width: 75%;
+    width: 80%;
   }
   @include mobile {
     flex-direction: column;
   }
   .text-description {
-    width: 60%;
-    h1 {
+    width: 40%;
+    h2 {
       width: fit-content;
       @include large-screen {
         font-size: 44px;
@@ -20,7 +21,7 @@
     p {
       width: fit-content;
       text-align: start;
-      font: 600 16px/18px "Dosis", sans-serif;
+      font: 600 14px/16px "Dosis", sans-serif;
       @include large-screen {
         font: 600 32px/34px "Dosis", sans-serif;
       }
@@ -28,14 +29,28 @@
     @include mobile {
       width: 100%;
     }
+    @include small-laptops {
+      width: 45%;
+    }
+    @include tablet {
+      width: 45%;
+    }
   }
   .register-form {
     display: flex;
     flex-direction: column;
-    padding: 0 10%;
-    width: 40%;
+    width: 33%;
     @include tablet {
-      padding: 0 5%;
+      width: 35%;
+      padding-left: 5%;
+    }
+    .input-label-container {
+      display: flex;
+      flex-direction: column;
+      height: 3.5em;
+      @include large-screen {
+        height: 8em;
+      }
     }
     label {
       width: fit-content;
@@ -51,6 +66,7 @@
       background: none;
       border-bottom: 2px solid lightgray;
       margin: 5% 0 5% 0;
+      // margin: 0% 0 5% 0;
       padding: 2% 0 4%;
       font-size: 14px;
       @include large-screen {

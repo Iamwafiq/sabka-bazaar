@@ -110,8 +110,9 @@
   height: 72%;
   justify-content: flex-end;
   font-weight: 600;
+  font-size: 15px;
   @include large-screen {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 .item-detail {
@@ -124,9 +125,8 @@
     letter-spacing: -0.5px;
     text-align: left;
     padding: 0;
-    font-size: 14px;
     @include large-screen {
-      font-size: 22px;
+      font-size: 24px;
     }
   }
 }
@@ -134,16 +134,26 @@
   display: flex;
   justify-content: space-around;
   width: fit-content;
-  span {
-    width: 25px;
+  align-items: flex-end;
+  .item-count {
+    width: 18px;
     text-align: center;
     font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   @include large-screen {
     align-items: baseline;
-    span {
+    .item-count {
       font-size: 26px;
       line-height: 26px;
+    }
+  }
+  @include mobile {
+    .item-count {
+      margin-left: 0.25em;
     }
   }
 }
@@ -161,23 +171,39 @@
   padding: 0 5px;
   margin: 0 0.5em;
   @include large-screen {
-    font-size: 30px;
+    font-size: 24px;
   }
   @include tablet {
     border-radius: 3px;
+    width: 1.7em;
+    height: 1.4em;
+    margin: 0 0.5em 0 0.25em;
   }
   @include mobile {
     border-radius: 3px;
     padding: 0 5px;
-    margin: 0 0 0 0.5em;
+    margin: 0 0 0 0.25em;
+    width: 1.7em;
+    height: 1.4em;
   }
 }
 .times-icon {
   display: flex;
   height: fit-content;
   margin: 0 0.5em;
+  font-size: 16px;
+  @include large-screen {
+    font-size: 30px;
+  }
   @include mobile {
-    width: fit-content !important;
+    width: fit-content;
+    font-weight: 500;
+  }
+  @include tablet {
+    width: fit-content;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0.5em 0 0.25em;
   }
 }
 .each-item {
@@ -188,13 +214,18 @@
   padding: 1em;
   box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
   .cart-item-details {
-    width: 80%;
+    width: 83%;
     display: flex;
     flex-direction: row;
+    @include tablet {
+      width: 88%;
+    }
   }
   .item-image {
     width: 14%;
+    height: 4em;
   }
 
   @include tablet {
@@ -204,7 +235,7 @@
     .item-detail {
       font-size: 14px;
       h4 {
-        // height: 35%;
+        width: 95%;
       }
     }
     .item-final-price {
@@ -217,7 +248,6 @@
   @include mobile {
     .item-image {
       width: 15%;
-      height: 5em;
     }
     .item-detail {
       font-size: 14px;
@@ -285,6 +315,15 @@
       font-weight: 600;
     }
   }
+  @include large-screen {
+    h4 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
 }
 
 .cart-header {
@@ -297,6 +336,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 3%;
+  align-items: center;
   @include large-screen {
     font: 600 28px/30px "Dosis", sans-serif;
     height: 2%;
@@ -304,6 +344,8 @@
   p {
     margin: 0;
     cursor: pointer;
+    font-weight: 400;
+    font-size: 1.1em;
   }
   span {
     font: 14px/16px "Dosis", sans-serif;
@@ -359,7 +401,7 @@
     }
   }
   @include large-screen {
-    height: 12%;
+    height: 16%;
     .promo-text {
       font: 28px/28px "Dosis", sans-serif;
     }
@@ -383,6 +425,9 @@
   @include ipad {
     height: 13%;
   }
+  @include small-laptops {
+    height: 17%;
+  }
   @include mobile {
     .promo-text {
       font: 500 12px/12px "Dosis", sans-serif;
@@ -398,4 +443,20 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: baseline;
+}
+.item-price {
+  display: flex;
+  align-items: flex-end;
+  font-size: 13px;
+  font-weight: 600;
+  @include large-screen {
+    font-size: 22px;
+  }
+  @include mobile {
+    align-items: center;
+  }
+  @include tablet {
+    align-items: center;
+  }
 }
