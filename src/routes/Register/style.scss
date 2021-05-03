@@ -1,17 +1,18 @@
 @import "../../assets/style/mixins.scss";
 .page-content {
-  width: 65%;
+  width: 75%;
   display: flex;
   margin: 5% auto;
+  justify-content: flex-start;
   @include tablet {
-    width: 75%;
+    width: 80%;
   }
   @include mobile {
     flex-direction: column;
   }
   .text-description {
-    width: 60%;
-    h1 {
+    width: 40%;
+    h2 {
       width: fit-content;
       @include large-screen {
         font-size: 44px;
@@ -28,20 +29,36 @@
     @include mobile {
       width: 100%;
     }
+    @include small-laptops {
+      width: 45%;
+    }
+    @include tablet {
+      width: 45%;
+    }
   }
   .register-form {
     display: flex;
     flex-direction: column;
-    padding: 0 10%;
-    width: 40%;
+    width: 33%;
     @include tablet {
-      padding: 0 5%;
+      width: 35%;
+      padding-left: 5%;
+    }
+    .input-label-container {
+      display: flex;
+      flex-direction: column;
+      height: 3.5em;
+      @include large-screen {
+        height: 8em;
+      }
     }
     label {
       width: fit-content;
       font-size: 12px;
       color: #2fb9c6;
       padding: 2% 0 1% 0%;
+      font-weight: 500;
+      letter-spacing: -0.5px;
       @include large-screen {
         font-size: 26px;
       }
@@ -61,6 +78,9 @@
       outline: none;
       border-bottom: 2px solid #2fb9c6;
       margin: -1% 0 3% 0;
+    }
+    input::placeholder {
+      font-family: "Dosis", sans-serif;
     }
     @include large-screen {
       input::placeholder {

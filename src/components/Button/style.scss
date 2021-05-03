@@ -9,12 +9,12 @@
   font-weight: 500;
   font-size: 12px;
   @include mobile {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   @include small-laptops {
-    font-size: 11px;
+    font-size: 11px !important;
   }
   @include large-screen {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 }

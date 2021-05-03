@@ -64,7 +64,6 @@ const MobileProductCard = (props) => {
                             }
                             buttonText={`Buy Now @ Rs.${product.price}`}
                             buttonWidth="100%"
-                            buttonFont="12px"
                             buttonPadding="1em 0"
                           />
                         </div>

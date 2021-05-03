@@ -18,6 +18,9 @@
   @include mobile {
     display: none;
   }
+  @include tablet {
+    width: 78%;
+  }
 }
 .mobile {
   display: none;

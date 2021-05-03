@@ -18,6 +18,9 @@
       font: 500 26px/26px "Dosis", sans-serif;
     }
   }
+  @include tablet {
+    width: 22%;
+  }
   @include mobile {
     display: none;
   }

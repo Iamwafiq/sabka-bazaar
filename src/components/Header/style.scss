@@ -87,6 +87,9 @@
     height: 4em;
     cursor: pointer;
     margin: 0.5em 0;
+    @include tablet {
+      width: 25%;
+    }
     @include mobile {
       width: 6em;
       height: 2.5em;

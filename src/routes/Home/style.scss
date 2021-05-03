@@ -18,6 +18,9 @@
   margin: 0% auto;
   padding: 1.5em 0;
   border-bottom: 1px solid lightgray;
+  background: radial-gradient(at 50% -5px, gray, transparent 70%);
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
   @include tablet {
     width: 95%;
   }

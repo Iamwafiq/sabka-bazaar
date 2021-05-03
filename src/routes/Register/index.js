@@ -6,13 +6,13 @@ const RegisterPage = () => {
   const [activeInput, updateInput] = useState(null);
   const [formState, updateForm] = useState({});
   return (
-    <div>
-      <div className="page-content">
-        <div className="text-description">
-          <h2>Signup</h2>
-          <p>We do not share your personal details with anyone.</p>
-        </div>
-        <div className="register-form" onBlur={() => updateInput(null)}>
+    <div className="page-content">
+      <div className="text-description">
+        <h2>Signup</h2>
+        <p>We do not share your personal details with anyone.</p>
+      </div>
+      <div className="register-form" onBlur={() => updateInput(null)}>
+        <div className="input-label-container">
           {activeInput === 1 && <label>First Name</label>}
           <input
             type="text"
@@ -23,6 +23,8 @@ const RegisterPage = () => {
               updateForm({ ...formState, firstName: e.target.value })
             }
           />
+        </div>
+        <div className="input-label-container">
           {activeInput === 2 && <label>Last Name</label>}
           <input
             type="text"
@@ -33,6 +35,8 @@ const RegisterPage = () => {
               updateForm({ ...formState, lastName: e.target.value })
             }
           />
+        </div>
+        <div className="input-label-container">
           {activeInput === 3 && <label>Email</label>}
           <input
             type="email"
@@ -43,6 +47,8 @@ const RegisterPage = () => {
               updateForm({ ...formState, email: e.target.value })
             }
           />
+        </div>
+        <div className="input-label-container">
           {activeInput === 4 && <label>Pasword</label>}
           <input
             type="password"
@@ -53,6 +59,8 @@ const RegisterPage = () => {
               updateForm({ ...formState, password: e.target.value })
             }
           />
+        </div>
+        <div className="input-label-container">
           {activeInput === 5 && <label>Confirm Password</label>}
           <input
             type="password"
@@ -63,8 +71,12 @@ const RegisterPage = () => {
               updateForm({ ...formState, confirmPassword: e.target.value })
             }
           />
-          <ButtonComponent buttonText="Signup" buttonMargin="5% 0" />
         </div>
+        <ButtonComponent
+          buttonText="Signup"
+          buttonMargin="10% 0"
+          buttonFont="14px"
+        />
       </div>
     </div>
   );

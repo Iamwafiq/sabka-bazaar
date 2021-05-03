@@ -26,7 +26,7 @@ const LoginPage = () => {
             />
           </div>
           <div className="input-label-container">
-            {activeInput === 2 && <label>Pasword</label>}
+            {activeInput === 2 && <label>Password</label>}
             <input
               id="password-input"
               type="password"
@@ -38,7 +38,11 @@ const LoginPage = () => {
               }
             />
           </div>
-          <ButtonComponent buttonText="Login" buttonMargin="5% 0" />
+          <ButtonComponent
+            buttonText="Login"
+            buttonMargin="10% 0"
+            buttonFont="14px"
+          />
         </div>
       </div>
     </div>
