@@ -39,7 +39,9 @@ const HeaderComponent = () => {
         <div className="item-cart">
           <div className="login-details">
             <Link to="/login">SignIn</Link>
-            <Link to="/register">Register</Link>
+            <Link to="/register" className="register-button">
+              Register
+            </Link>
           </div>
           <div
             className="item-quantity-header"

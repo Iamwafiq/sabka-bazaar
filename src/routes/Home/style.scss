@@ -9,6 +9,9 @@
   @include mobile {
     width: 100%;
   }
+  @include large-screen {
+    width: 70%;
+  }
 }
 .offer-banner {
   display: flex;
@@ -21,6 +24,9 @@
   background: radial-gradient(at 50% -5px, gray, transparent 70%);
   background-size: 100% 10px;
   background-repeat: no-repeat;
+  @include large-screen {
+    width: 70%;
+  }
   @include tablet {
     width: 95%;
   }
@@ -42,6 +48,10 @@
     @include mobile {
       width: 7em;
       height: 6em;
+    }
+    @include large-screen {
+      width: 25em;
+      height: 22em;
     }
   }
   .bakery-img {

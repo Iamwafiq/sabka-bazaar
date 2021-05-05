@@ -10,6 +10,9 @@
   @include mobile {
     width: 100%;
   }
+  @include large-screen {
+    width: 70%;
+  }
 }
 .product-list {
   width: 80%;

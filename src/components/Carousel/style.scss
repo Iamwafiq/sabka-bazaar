@@ -12,11 +12,14 @@
   padding: 0.5em;
   text-transform: uppercase;
   position: absolute;
-  top: 45%;
+  top: 47%;
   z-index: 1;
   font-size: 12px;
   @include mobile {
     display: none;
+  }
+  @include large-screen {
+    font-size: 20px;
   }
 }
 .next-button {
@@ -26,10 +29,21 @@
   @include tablet {
     right: 0%;
   }
+  @include large-screen {
+    right: 15%;
+  }
 }
 .prev-button {
   left: 10%;
   @include tablet {
     left: 0%;
+  }
+  @include large-screen {
+    left: 15%;
+  }
+}
+.slick-track {
+  div {
+    outline: none;
   }
 }

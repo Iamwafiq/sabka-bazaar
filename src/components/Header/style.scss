@@ -13,12 +13,15 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      width: 20%;
+      width: 11%;
       @include mobile {
         width: 38vw;
       }
       @include large-screen {
         width: 12%;
+      }
+      @include small-laptops {
+        width: 15%;
       }
     }
     /*---query for header container---*/
@@ -30,6 +33,9 @@
       width: 100%;
       z-index: 111;
       height: 100%;
+    }
+    @include large-screen {
+      width: 70%;
     }
   }
 }
@@ -46,7 +52,7 @@
     color: #262529;
     font-weight: 500;
     @include large-screen {
-      font-size: 26px;
+      font-size: 24px;
     }
     @include tablet {
       margin: 0 0.5em 0 0.5em;
@@ -83,10 +89,13 @@
   align-items: baseline;
   width: 100%;
   .logo-img {
-    width: 7em;
+    width: 8em;
     height: 4em;
     cursor: pointer;
     margin: 0.5em 0;
+    @include small-laptops {
+      width: 7em;
+    }
     @include tablet {
       width: 25%;
     }
@@ -117,7 +126,7 @@
     font-weight: 500;
     margin-left: 15%;
     @include large-screen {
-      font-size: 32px;
+      font-size: 28px;
     }
   }
   a:visited {
@@ -137,4 +146,7 @@
     width: 3.5em;
     height: 4.5em;
   }
+}
+.register-button {
+  margin-left: 1em !important;
 }

@@ -1,33 +1,44 @@
-import Loadable from "react-loadable";
+import loadable from "@loadable/component";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Layout from "./components/Layout";
-import LoadingComponent from "./components/LoadingComponent";
 
-const RegisterPage = Loadable({
-  loader: () => import(/* webpackChunkName: "Register" */ "./routes/Register"),
-  loading: LoadingComponent,
-});
-const LoginPage = Loadable({
-  loader: () => import(/* webpackChunkName: "Login" */ "./routes/Login"),
-  loading: LoadingComponent,
-});
-const HomePage = Loadable({
-  loader: () => import(/* webpackChunkName: "Home" */ "./routes/Home"),
-  loading: LoadingComponent,
-});
-const ProductPage = Loadable({
-  loader: () => import(/* webpackChunkName: "Product" */ "./routes/Product"),
-  loading: LoadingComponent,
-});
-const HeaderComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "Header" */ "./components/Header"),
-  loading: LoadingComponent,
-});
-const FooterComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "Footer" */ "./components/Footer"),
-  loading: LoadingComponent,
-});
+const RegisterPage = loadable(
+  () => import(/* webpackChunkName: "Register" */ "./routes/Register"),
+  {
+    fallback: "<div> Loading chunk ....</div>",
+  }
+);
+const LoginPage = loadable(
+  () => import(/* webpackChunkName: "Login" */ "./routes/Login"),
+  {
+    fallback: "<div> Loading chunk ....</div>",
+  }
+);
+const HomePage = loadable(
+  () => import(/* webpackChunkName: "Home" */ "./routes/Home"),
+  {
+    fallback: "<div> Loading chunk ....</div>",
+  }
+);
+const ProductPage = loadable(
+  () => import(/* webpackChunkName: "Product" */ "./routes/Product"),
+  {
+    fallback: "<div> Loading chunk ....</div>",
+  }
+);
+const HeaderComponent = loadable(
+  () => import(/* webpackChunkName: "Header" */ "./components/Header"),
+  {
+    fallback: "<div> Loading chunk ....</div>",
+  }
+);
+const FooterComponent = loadable(
+  () => import(/* webpackChunkName: "Footer" */ "./components/Footer"),
+  {
+    fallback: "<div> Loading chunk ....</div>",
+  }
+);
 
 const App = () => {
   return (
