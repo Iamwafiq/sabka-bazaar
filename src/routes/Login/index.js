@@ -7,13 +7,13 @@ const LoginPage = () => {
   const [formState, updateForm] = useState({});
   return (
     <div>
-      <div className="page-content">
-        <div className="text-description">
+      <div className="login-page-content">
+        <div className="login-text-description">
           <h2>Login</h2>
           <p>Get access to your Orders, Wishlist and Recommendations.</p>
         </div>
-        <div className="register-form" onBlur={() => updateInput(null)}>
-          <div className="input-label-container">
+        <div className="login-form" onBlur={() => updateInput(null)}>
+          <div className="login-input-label-container">
             {activeInput === 1 && <label>Email</label>}
             <input
               id="email-input"
@@ -25,7 +25,7 @@ const LoginPage = () => {
               }
             />
           </div>
-          <div className="input-label-container">
+          <div className="login-input-label-container">
             {activeInput === 2 && <label>Password</label>}
             <input
               id="password-input"

@@ -10,12 +10,15 @@
   @include mobile {
     flex-direction: column;
   }
+  @include large-screen {
+    width: 65%;
+  }
   .text-description {
     width: 40%;
     h2 {
       width: fit-content;
       @include large-screen {
-        font-size: 44px;
+        font-size: 40px;
       }
     }
     p {
@@ -23,8 +26,11 @@
       text-align: start;
       font: 600 14px/16px "Dosis", sans-serif;
       @include large-screen {
-        font: 600 32px/34px "Dosis", sans-serif;
+        font: 600 28px/30px "Dosis", sans-serif;
       }
+    }
+    @include large-screen {
+      width: 50%;
     }
     @include mobile {
       width: 100%;
