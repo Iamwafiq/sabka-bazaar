@@ -14,11 +14,12 @@ const ProductPage = () => {
   const history = useHistory();
 
   const { state, dispatch } = useContext(CartContext);
-  const [categories, updateCategories] = useState([]);
+  const [categories, updateCategories] = useState(state.categories);
   const [products, updateProducts] = useState([]);
   const [currentCategory, updateCurrentCategory] = useState({});
   useEffect(() => {
     getData();
+    if (!state.categories.length) getCategory();
     if (location?.state?.category) {
       const {
         state: { category },
@@ -28,14 +29,16 @@ const ProductPage = () => {
     }
   }, []); // eslint-disable-line
   const getData = async () => {
-    let tempArr = [];
     const prodcutResult = await apiResource.get("products");
+    updateProducts(prodcutResult);
+  };
+  const getCategory = async () => {
+    let tempArr = [];
     const result = await apiResource.get("categories");
     if (result?.length) tempArr = result.filter((el) => el.enabled);
-    updateProducts(prodcutResult);
     updateCategories(tempArr);
+    dispatch({ type: "getCategories", payload: tempArr });
   };
-
   return (
     <div className="product-page">
       <SideMenuComponent categories={categories} />

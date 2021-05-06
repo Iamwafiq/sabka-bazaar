@@ -10,22 +10,24 @@ import "./style.scss";
 
 const HomePage = () => {
   const history = useHistory();
-  const { state } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
   const [banners, updateBanners] = useState([]);
-  const [categories, updateCategories] = useState([]);
+  const [categories, updateCategories] = useState(state.categories);
   useEffect(() => {
     getOffers();
-    getCategory();
-  }, []);
+    if (!state.categories.length) getCategory();
+  }, []); // eslint-disable-line
   const getOffers = async () => {
     const result = await apiResource.get("banners");
     updateBanners(result);
   };
+
   const getCategory = async () => {
     let tempArr = [];
     const result = await apiResource.get("categories");
     if (result?.length) tempArr = result.filter((el) => el.enabled);
     updateCategories(tempArr);
+    dispatch({ type: "getCategories", payload: tempArr });
   };
 
   return (

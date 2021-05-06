@@ -42,6 +42,7 @@ export const CartContext = createContext();
 const initalState = {
   items: [],
   visibility: false,
+  categories: [],
   images: {
     "/static/images/products/fruit-n-veg/apple.jpg": apple,
     "/static/images/products/fruit-n-veg/capsicum-green.jpg": capsicum,
@@ -98,6 +99,12 @@ function cartReducer(state, action) {
       return {
         ...state,
         items: tempArr,
+      };
+    }
+    case "getCategories": {
+      return {
+        ...state,
+        categories: action.payload,
       };
     }
     case "changeVisibilty": {
